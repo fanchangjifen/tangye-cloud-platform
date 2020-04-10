@@ -8,3 +8,12 @@
 
 # tangye-angel-mysql
 基于dynamic-datasource，mybatis-plus，druid实现对mysql数据库操作的样例项目，支持Mysql5.7.x,Mysql8.0.x版本
+
+# tangye-angel-elasticsearch6
+基于elasticsearch-rest-high-level-client实现对Elasticsearch6.x版本的集成样例
+
+# tangye-angel-elasticsearch7
+基于elasticsearch-rest-high-level-client实现对Elasticsearch7.x版本的集成样例
+
+# tangye-angel-rabbitmq
+基于rabbitmq3.6.5实现对rabbitmq客户端的集成样例
