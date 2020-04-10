@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tangye-angel-common/tangye-angel-common.iml" filepath="$PROJECT_DIR$/tangye-angel-common/tangye-angel-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangye-angel-mysql/tangye-angel-mysql.iml" filepath="$PROJECT_DIR$/tangye-angel-mysql/tangye-angel-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tangye-cloud-platform.iml" filepath="$PROJECT_DIR$/tangye-cloud-platform.iml" />
+    </modules>
+  </component>
+</project>
