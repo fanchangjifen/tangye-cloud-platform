@@ -26,7 +26,7 @@ spring:
           password: HBrhpt@2019
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://10.110.10.30:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
-        slave_sync:
+        slave:
           username: hubei_rhpt
           password: HBrhpt@2019
           driver-class-name: com.mysql.cj.jdbc.Driver

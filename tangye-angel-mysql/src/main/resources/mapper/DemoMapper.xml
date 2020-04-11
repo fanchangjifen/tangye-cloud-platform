@@ -5,4 +5,12 @@
     <select id="selectDemoList" resultType="map">
         select code,name from pub_region where code=#{code}
     </select>
+
+    <select id="selectDemoPageList" resultType="map">
+        select code,name
+        from pub_region where status = '1'
+        <if test="condition.code!=null and condition.code!=''">
+            and code = #{condition.code}
+        </if>
+    </select>
 </mapper>
