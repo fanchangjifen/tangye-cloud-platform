@@ -1,4 +1,8 @@
 spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
   datasource:
     dynamic:
       druid: #以下是全局默认值，可以全局更改
