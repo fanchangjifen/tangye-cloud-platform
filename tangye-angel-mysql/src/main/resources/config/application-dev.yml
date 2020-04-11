@@ -22,12 +22,12 @@ spring:
       primary: master
       datasource:
         master:
-          username: hubei_rhpt
-          password: HBrhpt@2019
+          username: root
+          password: password
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://10.110.10.30:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
-        slave:
-          username: hubei_rhpt
-          password: HBrhpt@2019
+          url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowMultiQueries=true
+        slave_sync:
+          username: root
+          password: password
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://10.110.10.30:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false
+          url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false
