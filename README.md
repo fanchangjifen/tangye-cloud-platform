@@ -19,3 +19,6 @@ Spring cloud H + Spring cloud alibaba + Spring boot技术架构，脱胎于日�
 
 # tangye-angel-rabbitmq
 基于rabbitmq3.6.5实现对rabbitmq客户端的集成样例
+
+# tangye-angel-presto
+基于presto实现对异构数据源操作
