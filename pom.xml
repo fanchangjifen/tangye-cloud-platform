@@ -12,6 +12,8 @@
         <module>tangye-angel-common</module>
         <module>tangye-angel-mysql</module>
         <module>tangye-angel-dfs</module>
+        <module>tangye-angel-elasticsearch6</module>
+        <module>tangye-angel-elasticsearch7</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
