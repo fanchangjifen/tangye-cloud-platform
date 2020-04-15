@@ -1,5 +1,7 @@
 package com.angel.common.utils;
 
+import cn.hutool.core.lang.Snowflake;
+import cn.hutool.core.util.IdUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -17,6 +19,12 @@ import java.util.Date;
  */
 @Slf4j
 public class CTools {
+
+    public static String getSnowflakeId(){
+        Snowflake snowflake = IdUtil.createSnowflake(1, 1);
+        long id = snowflake.nextId();
+        return String.valueOf(id);
+    }
 
 	public static String dateTimeMillis2String(long time,String format){
 		Instant instant = Instant.ofEpochMilli(time);
