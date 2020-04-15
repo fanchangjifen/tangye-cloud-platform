@@ -11,6 +11,7 @@
     <modules>
         <module>tangye-angel-common</module>
         <module>tangye-angel-mysql</module>
+        <module>tangye-angel-presto</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

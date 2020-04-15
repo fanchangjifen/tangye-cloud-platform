@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    presto:
+      type: org.apache.tomcat.jdbc.pool.DataSource
+      name: presto
+      driver-class-name: com.facebook.presto.jdbc.PrestoDriver
+      jdbc-url: jdbc:presto://127.0.0.1:8099/
+      username: presto
