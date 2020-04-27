@@ -22,3 +22,6 @@ Spring cloud H + Spring cloud alibaba + Spring boot技术架构，脱胎于日�
 
 # tangye-angel-presto
 基于presto实现对异构数据源操作
+
+# tangye-angel-dataway
+依托 DataQL 服务聚合能力，为应用提供一个 UI 界面。并以 jar 包的方式集成到应用中。 通过 Dataway 可以直接在界面上配置和发布接口
