@@ -1,0 +1,51 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    dynamic:
+      druid: #以下是全局默认值，可以全局更改
+        initial-size: 50    # 初始化连接池个数
+        max-active: 1000     #最大连接池个数
+        min-idle: 20        #最小连接池个数
+        max-wait: 10000    #配置获取连接等待超时的时间，单位毫秒，缺省启用公平锁，并发效率会有所下降
+        time-between-eviction-runs-millis: 5000   #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        keep-alive: true   #增强timeBetweenEvictionRunsMillis的周期性连接检查，minIdle内的空闲连接，每次检查强制验证连接有效性. 参考：https://github.com/alibaba/druid/wiki/KeepAlive_cn
+        validation-query: SELECT 1 FROM DUAL
+        #pool-prepared-statements: false  #打开PSCache，并且指定每个连接上PSCache的大小,Mysql不建议打开
+        test-while-idle: true # 建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+        test-on-borrow: false # 申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+        test-on-return: false # 归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        filters: stat,wall
+        wall:
+          multi-statement-allow: true
+          none-base-statement-allow: true
+      primary: master
+      datasource:
+        master:
+          username: test
+          password: test
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+        slave_sync:
+          username: test
+          password: test
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=GMT&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+
+### Dataway相关配置
+# 是否启用 Dataway 功能（必选：默认false）
+HASOR_DATAQL_DATAWAY: true
+# 是否开启 Dataway 后台管理界面（必选：默认false）
+HASOR_DATAQL_DATAWAY_ADMIN: true
+# dataway  API工作路径（可选，默认：/api/）
+HASOR_DATAQL_DATAWAY_API_URL: /api/
+
+# dataway-ui 的工作路径（可选，默认：/interface-ui/）
+HASOR_DATAQL_DATAWAY_UI_URL: /interface-ui/
+
+# SQL执行器方言设置（可选，建议设置）
+HASOR_DATAQL_FX_PAGE_DIALECT: mysql

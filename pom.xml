@@ -15,6 +15,7 @@
         <module>tangye-angel-elasticsearch6</module>
         <module>tangye-angel-elasticsearch7</module>
         <module>tangye-angel-presto</module>
+        <module>tangye-angel-dataway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

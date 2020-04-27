@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  config:
+    location: classpath:config/
+  application:
+    name: angel-angel-dataway
+
+server:
+  port: 9005
+  undertow:
+    io-threads: 16 # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+    worker-threads: 256 #阻塞任务线程池, 当执行类似servlet请求阻塞IO操作, undertow会从这个线程池中取得线程,它的值设置取决于系统线程执行任务的阻塞系数，默认值是IO线程数*8
+    buffer-size: 1024 # 每块buffer的空间大小,越小的空间被利用越充分
+    direct-buffers: true # 是否分配的直接内存(NIO直接分配的堆外内存)
+
