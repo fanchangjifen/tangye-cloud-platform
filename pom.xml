@@ -41,7 +41,7 @@
         <spring-alibaba.version>2.2.0.RELEASE</spring-alibaba.version>
         <elasticsearch.version>7.4.2</elasticsearch.version>
         <knife4j.version>1.9.6</knife4j.version>
-        <httpclient.version>4.5.10</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencyManagement>
